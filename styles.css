@@ -150,7 +150,7 @@ body {
     .nav-links {
       display: flex;
       gap: 2.5rem;
-      margin-right: 80px;
+      margin-right: 150px;
     }
     .nav-ser{
       gap: 1rem;
@@ -179,7 +179,7 @@ body {
     }
     
     .nav-link:hover {
-      color: #73a900;
+      color: white;
     }
     
     
