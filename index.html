@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshBite - Passion for producing food of the highest standard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar fixed w-full bg-white shadow-sm z-50" id="navbar" data-aos="fade-down">
+    <div class="container-nav">
+      <div class="navbar-wrapper">
+        <div class="logo">
+          <img src="assets/logo.png" alt="Logo" class="logo-image">
+        </div>
+
+        <div class="nav-links desktop-only">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="Catalogue.html" class="nav-link">Catalogue</a><!--Account-->
+          <a href="About.html" class="nav-link">About</a><!--Suppliers-->
+          <a href="Contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="halal">
+            <img src="assets/hal.png" alt="Logo" class="halal-img">
+        </div>
+
+        <button class="menu-button mobile-only" onclick="toggleMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu hidden" id="mobile-menu">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="index.html" class="mobile-nav-link">Catalogue</a>
+      <a href="index.html" class="mobile-nav-link">About</a>
+      <a href="services.html" class="mobile-nav-link">Suppliers</a>
+      <a href="about.html" class="mobile-nav-link">Account</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+  </nav>
+
+
+  <script>
+    // Get the navbar element
+    const navbar = document.getElementById('navbar');
+
+    // Listen for the scroll event
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 50) { // Change 50 to the scroll position where you want the color change
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+
+
+<div class="videor">
+    <video id="myVideo" class="desktop-video" autoplay loop muted>
+        <source src="assets/obac.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  <video id="myVideoMobile" class="mobile-video" autoplay loop muted>
+    <source src="assets/JAES (Mobile Video).mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  </div>
+  
+  
+  
+<div class="ssection" >
+<model-viewer
+data-aos="fade-right" 
+data-aos-delay="300"
+data-aos-anchor-placement="top-center"
+      id="sandwichModel"
+      src="assets/sandwich.glb"
+      camera-controls
+      disable-zoom
+      style="--poster-color: transparent;"
+      exposure="1"
+      alt="A 3D model of a sandwich" >
+    </model-viewer>
+    
+    <div class="textt-content" data-aos="fade-left" data-aos-delay="300">
+        <div class="headline">View Our Sandwich in 3D</div>
+        <div class="subtext">
+            Scroll to rotate — explore every delicious layer.<br/>
+            No filters. No distractions. Just pure sandwich vibes.<br/>
+            Built with flavor. Crafted in pixels.
+          </div>
+      </div>
+    </div>
+    
+    <script>
+      const model = document.getElementById('sandwichModel');
+
+      window.addEventListener('scroll', () => {
+        const scrollAmount = window.scrollY;
+        const rotationY = (scrollAmount / window.innerHeight) * Math.PI * 2;
+        model.rotation = `${rotationY}rad 0rad 0rad`;
+      });
+    </script>
+
+<div class="wave-container">
+    <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(255, 255, 255, 1)" offset="0%"></stop><stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,343L60,359.3C120,376,240,408,360,367.5C480,327,600,212,720,204.2C840,196,960,294,1080,285.8C1200,278,1320,163,1440,138.8C1560,114,1680,180,1800,212.3C1920,245,2040,245,2160,261.3C2280,278,2400,310,2520,334.8C2640,359,2760,376,2880,334.8C3000,294,3120,196,3240,196C3360,196,3480,294,3600,277.7C3720,261,3840,131,3960,81.7C4080,33,4200,65,4320,114.3C4440,163,4560,229,4680,277.7C4800,327,4920,359,5040,375.7C5160,392,5280,392,5400,326.7C5520,261,5640,131,5760,122.5C5880,114,6000,229,6120,302.2C6240,376,6360,408,6480,383.8C6600,359,6720,278,6840,220.5C6960,163,7080,131,7200,163.3C7320,196,7440,294,7560,351.2C7680,408,7800,425,7920,375.7C8040,327,8160,212,8280,155.2C8400,98,8520,98,8580,98L8640,98L8640,490L8580,490C8520,490,8400,490,8280,490C8160,490,8040,490,7920,490C7800,490,7680,490,7560,490C7440,490,7320,490,7200,490C7080,490,6960,490,6840,490C6720,490,6600,490,6480,490C6360,490,6240,490,6120,490C6000,490,5880,490,5760,490C5640,490,5520,490,5400,490C5280,490,5160,490,5040,490C4920,490,4800,490,4680,490C4560,490,4440,490,4320,490C4200,490,4080,490,3960,490C3840,490,3720,490,3600,490C3480,490,3360,490,3240,490C3120,490,3000,490,2880,490C2760,490,2640,490,2520,490C2400,490,2280,490,2160,490C2040,490,1920,490,1800,490C1680,490,1560,490,1440,490C1320,490,1200,490,1080,490C960,490,840,490,720,490C600,490,480,490,360,490C240,490,120,490,60,490L0,490Z"></path></svg>
+  </div>
+  
+    <section class="freshbite-section" data-aos="fade-up" data-aos-delay="300">
+        <h1 class="headline" data-aos="zoom-in" data-aos-delay="300">
+          EVERY BITE SHOULD BE A <span class="highlight">FRESH BITE</span>
+        </h1>
+        <p class="description" data-aos="zoom-in" data-aos-delay="300">
+          Fresh Bite has been producing fresh quality food across the UK for years using only local produce.
+          Supplying Universities, Colleges, Hospitals as well as over 1000 independent retail stores
+        </p>
+        <a href="About.html"><button class="cta-btn" data-aos="fade-up">MORE ABOUT FRESH BITE</button></a>
+      </section>
+      <div class="full-image"></div>
+      <!--<section class="hero-section">
+        <div class="image-container" data-aos="fade-right">
+          <img src="assets/cow.png" alt="Cow" />
+        </div>
+        <div class="text-content" data-aos="fade-left">
+          <h2>ONLY THE <span class="highlight">BEST</span></h2>
+          <p>We work closely with our British farmers and suppliers to produce food of the highest standard using freshly prepared ingredients.</p>
+          <p>Our meat is prepared using Halal Methods and just like our meat, our vegetables and fruit are also from the UK.</p>
+          <a href="About.html#Suppliers"><button class="butt">MORE ABOUT OUR SUPPLIERS</button></a>
+        </div>
+      </section>-->
+
+    <!-- AOS -->    
+      <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  </script>
+     
+      <footer class="modern-footer">
+        <div class="footer-content">
+          <div class="footer-section brand">
+            <img src="assets/footerlogo.png" alt="FreshBite Logo" class="footer-logo" />
+        </div>
+      
+          <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Catalogue.html">Catalogue</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="Contact.html">Contact</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+      
+          <div class="footer-section newsletter">
+            <h3>Subscribe</h3>
+            <form id="newsletter-form" action="subscribe.php" method="POST">
+                <input type="email" name="email" placeholder="Your email" required />
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+              </form>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+            <p>Designed by <a href="http://jaessolutions.com">JAES Solutions</a>, UK | Email: <a href="mailto:info@jaesSolutions.com">info@jaessolutions.com</a></p>
+            <p>Copyright &copy; 2025 Fresh Bite All Rights Reserved</p>
+        </div>
+      </footer>
+    </body>
+</html>

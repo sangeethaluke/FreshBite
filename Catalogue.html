@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Food Catalogue</title>
+  <link rel="stylesheet" href="Catalogue.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <nav class="navbar fixed w-full bg-white shadow-sm z-50" id="navbar" data-aos="fade-down">
+    <div class="container-nav">
+      <div class="navbar-wrapper">
+        <div class="logo">
+          <img src="assets/logo.png" alt="Logo" class="logo-image">
+        </div>
+
+        <div class="nav-links desktop-only">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="Catalogue.html" class="nav-link">Catalogue</a><!--Account-->
+          <a href="About.html" class="nav-link">About</a><!--Suppliers-->
+          <a href="Contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="halal">
+            <img src="assets/hal.png" alt="Logo" class="halal-img">
+        </div>
+
+        <button class="menu-button mobile-only" onclick="toggleMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu hidden" id="mobile-menu">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="index.html" class="mobile-nav-link">Catalogue</a>
+      <a href="index.html" class="mobile-nav-link">About</a>
+      <a href="services.html" class="mobile-nav-link">Suppliers</a>
+      <a href="about.html" class="mobile-nav-link">Account</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+  </nav>
+
+
+  <script>
+    // Get the navbar element
+    const navbar = document.getElementById('navbar');
+
+    // Listen for the scroll event
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 50) { // Change 50 to the scroll position where you want the color change
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+  <div class="header" data-aos="fade-down">
+    <h1>Our Fresh Catalogue</h1>
+  </div>
+  <div class="headerr">
+    <h1>View Our products</h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search products" />
+      <button onclick="searchProducts()">
+        🔍
+      </button>
+    </div>
+  </div>
+  <div class="carousel-container">
+    <div class="carousel-header">
+        <h2>New In</h2>
+        <button>See all New In →</button>
+    </div>
+    <button class="nav-btn nav-left" onclick="scrollCarousel(-1)">←</button>
+    <div class="carousel" id="productCarousel">
+        <div class="card">
+            <img src="assets/2.png" alt="">
+            <div class="card-content">
+                <span class="badge">New In</span>
+                <div class="brand">French Sticks</div>
+                <div class="product-name">Crispy on the outside, fluffy on the inside — say bon appétit to our French Sticks!</div>
+                <div class="weight"></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/3.png" alt="">
+            <div class="card-content">
+                <span class="badge">New In</span>
+                <div class="brand">Noodles</div>
+                <div class="product-name">Rich, warm, and full of flavor.</div>
+                <div class="weight"></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/4.png" alt="">
+            <div class="card-content">
+                <span class="badge">New In</span>
+                <div class="brand">Panini</div>
+                <div class="product-name">Grilled to perfection.</div>
+                <div class="weight"></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/5.png" alt="">
+            <div class="card-content">
+                <span class="badge">New In</span>
+                <div class="brand">Pitta Pockets</div>
+                <div class="product-name">Pocket full of flavor.</div>
+                <div class="weight"></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/6.png" alt="">
+            <div class="card-content">
+                <span class="badge">New In</span>
+                <div class="brand">Sandwiches</div>
+                <div class="product-name">Bite into happiness.</div>
+                <div class="weight"></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/7.png" alt="">
+            <div class="card-content">
+                <span class="badge">New In</span>
+                <div class="brand">Salads</div>
+                <div class="product-name">Healthy never tasted this good!</div>
+                <div class="weight"></div>
+            </div>
+        </div>
+    </div>
+    <button class="nav-btn nav-right" onclick="scrollCarousel(1)">→</button>
+</div>
+
+<script>
+    function scrollCarousel(direction) {
+        const carousel = document.getElementById('productCarousel');
+        const scrollAmount = 220;
+        carousel.scrollBy({
+            left: direction * scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+</script>
+  <div class="catalogue-grid">
+    <a href="baguettes.html" data-aos="fade-up" data-aos-delay="100">
+      <div class="catalogue-item">
+        <img src="assets/baguettes.jpg" class="catalogue-image" alt="Baguette">
+        <div class="catalogue-title">Baguettes</div>
+      </div>
+    </a>
+
+    <a href="ciabatta.html" data-aos="fade-up" data-aos-delay="200">
+      <div class="catalogue-item">
+        <img src="assets/Ciabatta.jpg" class="catalogue-image" alt="Ciabatta">
+        <div class="catalogue-title">Ciabatta</div>
+      </div>
+    </a>
+
+    <a href="croissant.html" data-aos="fade-up" data-aos-delay="300">
+      <div class="catalogue-item">
+        <img src="assets/crossaint.jpg" class="catalogue-image" alt="Croissant">
+        <div class="catalogue-title">Croissant</div>
+      </div>
+    </a>
+
+    <a href="curry-meals.html" data-aos="fade-up" data-aos-delay="400">
+      <div class="catalogue-item">
+        <img src="assets/curry meals.png" class="catalogue-image" alt="Curry Meals">
+        <div class="catalogue-title">Curry Meals</div>
+      </div>
+    </a>
+
+    <a href="deepfill.html" data-aos="fade-up" data-aos-delay="600">
+        <div class="catalogue-item">
+          <img src="assets/deep fill sandwiches.jpg" class="catalogue-image" alt="Special Sandwich">
+          <div class="catalogue-title">Deep Fill Sandwiches</div>
+        </div>
+      </a>
+
+    <a href="focaccia.html" data-aos="fade-up" data-aos-delay="500">
+      <div class="catalogue-item">
+        <img src="assets/focaccia.jpg" class="catalogue-image" alt="Packaged Meals">
+        <div class="catalogue-title">Focaccia</div>
+      </div>
+    </a>
+
+    
+    <a href="frenchsticks.html" data-aos="fade-up" data-aos-delay="700">
+        <div class="catalogue-item">
+          <img src="assets/2.png" class="catalogue-image" alt="Packaged Meals">
+          <div class="catalogue-title">French Sticks</div>
+        </div>
+      </a>
+
+      <a href="packaged.html" data-aos="fade-up" data-aos-delay="800">
+        <div class="catalogue-item">
+          <img src="assets/.png" class="catalogue-image" alt="Packaged Meals">
+          <div class="catalogue-title">Khobz Rolls</div>
+        </div>
+      </a>
+
+      <a href="packaged.html" data-aos="fade-up" data-aos-delay="900">
+        <div class="catalogue-item">
+          <img src="assets/3.png" class="catalogue-image" alt="Packaged Meals">
+          <div class="catalogue-title">Noodles</div>
+        </div>
+      </a>
+      <a href="packaged.html" data-aos="fade-up" data-aos-delay="1000">
+        <div class="catalogue-item">
+          <img src="assets/4.png" class="catalogue-image" alt="Packaged Meals">
+          <div class="catalogue-title">Panini</div>
+        </div>
+      </a>
+      <a href="packaged.html" data-aos="fade-up" data-aos-delay="1100">
+        <div class="catalogue-item">
+          <img src="assets/5.png" class="catalogue-image" alt="Packaged Meals">
+          <div class="catalogue-title">Pitta Pockets</div>
+        </div>
+      </a>
+      <a href="deepfill.html" data-aos="fade-up" data-aos-delay="1200">
+        <div class="catalogue-item">
+          <img src="assets/6.png" class="catalogue-image" alt="Special Sandwich">
+          <div class="catalogue-title">Premium Range Sandwiches</div>
+        </div>
+      </a>
+
+      <a href="deepfill.html" data-aos="fade-up" data-aos-delay="1200">
+        <div class="catalogue-item">
+          <img src="assets/7.png" class="catalogue-image" alt="Special Sandwich">
+          <div class="catalogue-title">Salads</div>
+        </div>
+      </a>
+
+      <a href="deepfill.html" data-aos="fade-up" data-aos-delay="1200">
+        <div class="catalogue-item">
+          <img src="assets/8.png" class="catalogue-image" alt="Special Sandwich">
+          <div class="catalogue-title">Samosas</div>
+        </div>
+      </a>
+
+      <a href="deepfill.html" data-aos="fade-up" data-aos-delay="1200">
+        <div class="catalogue-item">
+          <img src="assets/9.png" class="catalogue-image" alt="Special Sandwich">
+          <div class="catalogue-title">Soft Rolls</div>
+        </div>
+      </a>
+
+      <a href="deepfill.html" data-aos="fade-up" data-aos-delay="1200">
+        <div class="catalogue-item">
+          <img src="assets/deep fill sandwiches.jpg" class="catalogue-image" alt="Special Sandwich">
+          <div class="catalogue-title">Torpedos</div>
+        </div>
+      </a>
+
+      <a href="deepfill.html" data-aos="fade-up" data-aos-delay="1200">
+        <div class="catalogue-item">
+          <img src="assets/deep fill sandwiches.jpg" class="catalogue-image" alt="Special Sandwich">
+          <div class="catalogue-title">Tortilla Wraps</div>
+        </div>
+      </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      easing: 'ease-in-out',
+      once: true,
+    });
+
+    const searchInput = document.getElementById("searchInput");
+    const catalogueItems = document.querySelectorAll(".catalogue-grid a");
+
+    searchInput.addEventListener("input", function () {
+      const searchTerm = searchInput.value.toLowerCase().trim();
+
+      const visibleItems = [];
+      const hiddenItems = [];
+
+      catalogueItems.forEach(link => {
+        const itemTitle = link.querySelector(".catalogue-title").textContent.toLowerCase();
+        if (itemTitle.includes(searchTerm)) {
+          link.style.display = "";
+          visibleItems.push(link);
+        } else {
+          link.style.display = "none";
+          hiddenItems.push(link);
+        }
+      });
+
+      const grid = document.querySelector(".catalogue-grid");
+      [...visibleItems, ...hiddenItems].forEach(item => grid.appendChild(item));
+    });
+  </script>
+</body>
+</html>
