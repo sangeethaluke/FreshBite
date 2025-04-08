@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - FreshBite</title>
+  <link rel="stylesheet" href="About.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <nav class="navbar fixed w-full bg-white shadow-sm z-50" id="navbar" data-aos="fade-down">
+    <div class="container-nav">
+      <div class="navbar-wrapper">
+        <div class="logo">
+          <img src="assets/logo.png" alt="Logo" class="logo-image">
+        </div>
+
+        <div class="nav-links desktop-only">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="Catalogue.html" class="nav-link">Catalogue</a><!--Account-->
+          <a href="About.html" class="nav-link">About</a><!--Suppliers-->
+          <a href="Contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="halal">
+            <img src="assets/hal.png" alt="Logo" class="halal-img">
+        </div>
+
+        <button class="menu-button mobile-only" onclick="toggleMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu hidden" id="mobile-menu">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="index.html" class="mobile-nav-link">Catalogue</a>
+      <a href="index.html" class="mobile-nav-link">About</a>
+      <a href="services.html" class="mobile-nav-link">Suppliers</a>
+      <a href="about.html" class="mobile-nav-link">Account</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+  </nav>
+
+
+  <script>
+    // Get the navbar element
+    const navbar = document.getElementById('navbar');
+
+    // Listen for the scroll event
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 50) { // Change 50 to the scroll position where you want the color change
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+
+    <header data-aos="fade-down">
+        <h1>About FreshBite</h1>
+        <p>Where Taste Meets Innovation — Crafting unforgettable food journeys.</p>
+      </header>
+
+  <section class="about-section">
+    <div class="about-text" data-aos="fade-right">
+      <h2>Our Story</h2>
+      <p>
+        FreshBite began with a simple dream — to bring people together through food. 
+        Founded by culinary enthusiasts, our mission is to create bold, unforgettable flavors 
+        while staying rooted in freshness, sustainability, and creativity. 
+        From humble pop-up beginnings to becoming a city-favorite destination, 
+        we’ve remained true to our purpose: <strong>To produce food of the highest standard.</strong>
+      </p>
+    </div>
+    <div class="about-image" data-aos="fade-left">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Our Restaurant"/>
+    </div>
+  </section>
+  <section class="about-section1">
+    <div class="about-image1" data-aos="fade-right">
+        <img src="assets/SONU2857.jpg" alt="Fresh Bite Product Display">
+      </div>
+    <div class="about-text1" data-aos="fade-left">
+      <h2>About Fresh Bite</h2>
+      <p>
+        <strong>Fresh Bite</strong> is a major supplier of <em>sandwiches, baguettes, ciabatta, focaccia, curries, salads, pasta,</em> and <em>noodles</em> within the food industry.
+      </p>
+      <p>
+        We currently supply <strong>universities, colleges, hospitals,</strong> and over <strong>1,000 independent retail stores</strong>, including petrol stations. We manufacture and distribute our fresh products <strong>six days a week</strong>.
+      </p>
+      <p>
+        We love visiting companies for <strong>food tasting appointments</strong>, so you and your team can fully appreciate the quality of our products.
+      </p>
+      <p>
+        We offer <strong>competitive discounts</strong>, as well as a <strong>sale-or-return</strong> option on our products.
+      </p>
+    </div>
+  
+    
+  </section>
+  <section class="core-values">
+    <h3>What We Stand For</h3>
+    <div class="values-grid">
+        <div class="value-card" data-aos="zoom-in" data-aos-delay="100">
+        <h4>Fresh Ingredients</h4>
+        <p>We source locally and seasonally to deliver rich flavors in every bite.</p>
+      </div>
+      <div class="value-card" data-aos="zoom-in" data-aos-delay="100">
+        <h4>Creative Menus</h4>
+        <p>Innovation is our secret ingredient. We never stop experimenting!</p>
+      </div>
+      <div class="value-card" data-aos="zoom-in" data-aos-delay="100">
+        <h4>Warm Vibes</h4>
+        <p>Our spaces are cozy, modern, and designed to make you feel at home.</p>
+      </div>
+      <div class="value-card" data-aos="zoom-in" data-aos-delay="100">
+        <h4>Sustainability</h4>
+        <p>Eco-friendly practices and zero food waste are part of our DNA.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="suppliers-section" id="Suppliers">
+    <div class="text-area" data-aos="fade-right">
+      <h2><span class="highlight">OUR SUPPLIERS</span></h2>
+      <p>
+        We work closely with our British farmers and suppliers to produce food of the highest
+        standard using freshly prepared ingredients.
+      </p>
+      <p>
+        Our meat is prepared using Halal Methods and just like our meat, our vegetables and fruit
+        are also from the UK.
+      </p>
+      <button>Learn More</button>
+    </div>
+    <div class="image-area" data-aos="fade-left">
+      <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783" alt="Farmers with produce" />
+    </div>
+  </section>
+  
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
+</body>
+</html>
